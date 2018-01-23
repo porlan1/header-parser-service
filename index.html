@@ -1,0 +1,13 @@
+<html>
+	<body>
+	</body>
+	<script>
+		fetch('/header_data').then((res)=>{
+			return res.json();
+		}).then((res)=>{
+			document.body.innerHTML = JSON.stringify(res);
+		}).catch((e)=>{
+			document.body.innerHTML = e;
+		});
+	</script>
+</html>
